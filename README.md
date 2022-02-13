@@ -1,2 +1,2 @@
-# Configs
-My Configs for various system programs and game enhancements (cheats yes)
+# Scripts
+My Miscellaneous Configs and Scripts for various system programs and Game enhancements (cheats, yes)
