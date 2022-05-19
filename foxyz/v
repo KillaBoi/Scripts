@@ -2,7 +2,7 @@
     "general": {
         "screen_width": 1920,
         "screen_height": 1080,
-        "sensitivity": 0.5,
+        "sensitivity": 0.55,
         "color_mode": 0,
         "capture_speed": 1
     },
@@ -13,18 +13,20 @@
         "pixel_height_adjust": 1,
         "speed": 0.1,
         "flick_first_shot": true,
+        "flick_when_in_target": false,
         "flick_speed": 1.0,
-        "delay_between_ticks": 10,
-        "delay_to_start_recoil": 35,
-        "max_recoil": 25.0,
-        "recoil_reset_value": 12.0
+        "delay_between_ticks": 5,
+        "delay_to_start_recoil": 0,
+        "max_recoil": 32.0,
+        "recoil_reset_value": 22.0
     },
     "trigger": {
         "enabled": true,
         "key": 5,
-        "delay": 30,
-        "delay_between_shots": 225,
-        "fov": 7,
-        "magnet": false
+        "delay": 20,
+        "delay_between_shots": 200,
+        "fov": 20,
+        "magnet": true,
+        "silentaim": false
     }
 }
