@@ -2,26 +2,30 @@
     "general": {
         "screen_width": 1920,
         "screen_height": 1080,
-        "sensitivity": 0.50,
+        "sensitivity": 0.5,
         "color_mode": 0,
         "disable_recoil": false
     },
     "aim": {
         "enabled": true,
+        "thread_delay": 2,
         "fov": 35,
         "height_adjust": 2,
         "speed": 0.082,
         "flick": true,
         "flick_speed": 1.0,
-        "delay_to_start_recoil": 0
+        "delay_to_start_recoil": 0,
+        "delay_between_ticks": 5
     },
     "trigger": {
         "enabled": true,
+        "thread_delay": 1,
         "key": 5,
         "fov": 20,
         "height_adjust": 4,
         "delay": 20,
-        "delay_between_shots": 200,
-        "magnet": true
+        "delay_between_shots": 250,
+        "magnet": true,
+        "with_shot": true
     }
 }
