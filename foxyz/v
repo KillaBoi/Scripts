@@ -9,11 +9,11 @@
     "aim": {
         "enabled": true,
         "thread_delay": 2,
-        "fov": 35,
+        "fov": 25,
         "height_adjust": 2,
-        "speed": 0.082,
+        "speed": 0.072,
         "flick": true,
-        "flick_speed": 1.0,
+        "flick_speed": 0.93,
         "delay_to_start_recoil": 0,
         "delay_between_ticks": 5
     },
