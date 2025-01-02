@@ -8,19 +8,19 @@ iDRAC Setting Fan Speed on Poweredge R730 with IPMI
 
 # Note when you change fan settings, give it a few seconds to happen, it isn't quite instant
 # get list of devices.  Also "lanplus" is a specification, not your local interface name, so leave it as lanplus.
-ipmitool -I lanplus -H 192.168.16.2 -U sysadmin -P ******** sdr list
+ipmitool -I lanplus -H 192.168.8.144 -U root -P calvin sdr list
 
 # get fan speeds, exhaust temp  (use dev names from above cmd)
-ipmitool -I lanplus -H 192.168.16.2 -U sysadmin -P ******** sensor reading "Fan1 RPM" "Fan2 RPM" "Fan3 RPM" "Fan4 RPM" "Fan5 RPM" "Fan6 RPM" "Exhaust Temp"
+ipmitool -I lanplus -H 192.168.8.144 -U root -P calvin sensor reading "Fan1 RPM" "Fan2 RPM" "Fan3 RPM" "Fan4 RPM" "Fan5 RPM" "Fan6 RPM" "Exhaust Temp"
 
 # change fan speed control to manual
-ipmitool -I lanplus -H 192.168.16.2 -U sysadmin -P ******** raw 0x30 0x30 0x01 0x00
+ipmitool -I lanplus -H 192.168.8.144 -U root -P calvin raw 0x30 0x30 0x01 0x00
 
 # set fan speed to 30% of max (hint: 0x1e is hexadecimal for 30)
-ipmitool -I lanplus -H 192.168.16.2 -U sysadmin -P ******** raw 0x30 0x30 0x02 0xff 0x1e
+ipmitool -I lanplus -H 192.168.8.144 -U root -P calvin raw 0x30 0x30 0x02 0xff 0x1e
 
 # set fan speed to 40% of max (hint: 0x28 is hexadecimal for 40)
-ipmitool -I lanplus -H 192.168.16.2 -U sysadmin -P ******** raw 0x30 0x30 0x02 0xff 0x28
+ipmitool -I lanplus -H 192.168.8.144 -U root -P calvin raw 0x30 0x30 0x02 0xff 0x28
 
 # change fan speed control to automatic (if you want to go back to letting it manage itself and be unbearably loud again)
-ipmitool -I lanplus -H 192.168.16.2 -U sysadmin -P ******** raw 0x30 0x30 0x01 0x01
+ipmitool -I lanplus -H 192.168.8.144 -U root -P calvin raw 0x30 0x30 0x01 0x01
