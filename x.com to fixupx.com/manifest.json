@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "X to FixupX URL Rewriter",
+  "version": "1.0",
+  "description": "Rewrites copied x.com URLs to fixupx.com for Discord embedding",
+  "permissions": [
+    "clipboardWrite",
+    "clipboardRead",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.x.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
