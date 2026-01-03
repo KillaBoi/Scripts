@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Killa's Browser Extension",
+  "version": "1.1",
+  "description": "Has multiple useful tools for myself",
+  "permissions": [
+    "clipboardWrite",
+    "clipboardRead",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://api.steampowered.com/*",
+    "https://steamcommunity.com/*",
+    "https://api.allorigins.win/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.x.com/*"],
+      "js": ["content.js"]
+    },
+    {
+      "matches": ["*://*.csrep.gg/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
